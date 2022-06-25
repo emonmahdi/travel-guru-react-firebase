@@ -3,12 +3,13 @@ import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import './Navigation.css'
 
 import logo from '../../../Assets/Logo.png'
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
   return (
-    <Navbar collapseOnSelect expand="lg"  variant='dark'>
+    <Navbar collapseOnSelect expand="lg"  variant='light'>
   <Container>
-  <Navbar.Brand href="#home">
+  <Navbar.Brand href="/home">
       <img src={logo} className="img-fluid" height='130px' width='150px' alt="" />
   </Navbar.Brand>
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -21,7 +22,10 @@ const Navigation = () => {
       <Nav.Link href="#pricing">Destination</Nav.Link> 
       <Nav.Link href="#pricing">Blog</Nav.Link> 
       <Nav.Link href="#pricing">Contact</Nav.Link> 
-      <button className='btn btn-warning'>Login</button> 
+      <Link to='/register'>
+          <button className='btn btn-warning'>Login</button> 
+      </Link>
+      
     </Nav> 
   </Navbar.Collapse>
   </Container>
