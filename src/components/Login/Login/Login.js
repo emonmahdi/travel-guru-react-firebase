@@ -5,15 +5,24 @@ import Navigation from '../../Home/Navbar/Navigation';
 
 import fbImg from '../../../Assets/Icon/fb.png';
 import googleImg from '../../../Assets/Icon/google.png';
+import useFirebase from '../../../Hooks/useFirebase';
 
 const Login = () => {
+    const {user, signInUsingGoogle} = useFirebase();
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <div>
             <Navigation />
             <div className="registerForm">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="form-content">
                         <h2>Login</h2>
+                        <h5>{user.email && user.displayName}</h5>
                         <div> 
                             <input type="email" placeholder='User Name or Email' />
                             <input type="password" placeholder='Password' /> 
@@ -24,7 +33,7 @@ const Login = () => {
                         </div>
                     </div>
                     <div className="social-login">
-                        <button className=''> 
+                        <button className='' onClick={signInUsingGoogle}> 
                             <img src={googleImg} className='img-fluid me-3' width='26px' height='26px' alt="" />
                             Continue with Google 
                         </button>
