@@ -10,11 +10,13 @@ import {
 } from "react-router-dom";
 import Login from './components/Login/Login/Login';
 import Register from './components/Login/Register/Register';
+import AuthProvider from './Contexts/AuthProvider';
 
 
 function App() {
   return (
     <div className="App"> 
+    <AuthProvider>
        <BrowserRouter>
           <Routes>
             <Route path='/' element={<Home />} />
@@ -22,7 +24,8 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
           </Routes>
-       </BrowserRouter>     
+       </BrowserRouter>  
+       </AuthProvider>   
     </div>
   );
 }

@@ -29,7 +29,7 @@ const Services = () => {
                             services &&  services.map(service => {
                                 const {id, img, title} = service;
                                 return (
-                                    <div className='col-md-4'>
+                                    <div key={id} className='col-md-4'>
                                         <Link to='/home'>
                                             <div className="service-card">
                                                 <div className="card-img">

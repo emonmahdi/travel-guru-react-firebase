@@ -3,16 +3,23 @@ import { Link } from 'react-router-dom';
 
 import fbImg from '../../../Assets/Icon/fb.png';
 import googleImg from '../../../Assets/Icon/google.png';
+import useFirebase from '../../../Hooks/useFirebase';
 
 import Navigation from '../../Home/Navbar/Navigation';
 import './Register.css';
 
 const Register = () => {
+    const {user, signInUsingGoogle} = useFirebase();
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
     return (
         <div className='registerComponent'>
             <Navigation />
             <div className="registerForm">
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className="form-content">
                         <h2>Create an Account</h2>
                         <div>
@@ -28,7 +35,7 @@ const Register = () => {
                         </div>
                     </div>
                     <div className="social-login">
-                        <button className=''> 
+                        <button onClick={signInUsingGoogle}> 
                             <img src={googleImg} className='img-fluid me-3' width='26px' height='26px' alt="" />
                             Continue with Google 
                         </button>

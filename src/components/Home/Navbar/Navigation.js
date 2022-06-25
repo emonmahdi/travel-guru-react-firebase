@@ -10,7 +10,7 @@ const Navigation = () => {
   const { user, logOut } = useFirebase();
 
   return (
-    <Navbar collapseOnSelect expand="lg" variant="light">
+    <Navbar collapseOnSelect expand="lg" variant="warning">
       <Container>
         <Navbar.Brand href="/home">
           <img
@@ -35,6 +35,12 @@ const Navigation = () => {
             <Nav.Link href="#pricing">Destination</Nav.Link>
             <Nav.Link href="#pricing">Blog</Nav.Link>
             <Nav.Link href="#pricing">Contact</Nav.Link>
+            <Nav.Link>
+            {
+              user.email && <span className="text-warning">{user.displayName}</span>
+            }
+            </Nav.Link>
+            
             {
               user.email ? <Button onClick={logOut} variant="danger">Logout</Button> :
               <Link to="/register">
