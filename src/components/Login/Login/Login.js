@@ -8,7 +8,7 @@ import googleImg from '../../../Assets/Icon/google.png';
 import useFirebase from '../../../Hooks/useFirebase';
 
 const Login = () => {
-    const {user, signInUsingGoogle} = useFirebase();
+    const {user, signInUsingGoogle, logOut} = useFirebase();
 
 
     const handleSubmit = (e) => {
