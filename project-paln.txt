@@ -1,0 +1,10 @@
+Task - Travel guru
+1. Home page desgin
+2. Navabr and home page banner section
+3. banner section include services slider
+4. login route and component
+5. services private route set
+6. firebase login system, google, facebook, email and password.
+7. Context api
+8. custome hook.
+9. react-route-dom version 6 use.
