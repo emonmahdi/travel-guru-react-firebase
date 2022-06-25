@@ -1,0 +1,19 @@
+.card-img{
+    border:2px solid yellow;
+    border-radius: 10px;
+    width: 100%;
+    overflow: hidden;
+}
+.service-card {
+    position: relative;
+    overflow: hidden;
+    
+}
+.service-card h3{
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    color:#fff;
+    font-size: 22px;
+    font-weight: bold;
+} 

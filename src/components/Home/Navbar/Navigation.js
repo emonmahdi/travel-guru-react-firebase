@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import './Navigation.css'
 
 import logo from '../../../Assets/Logo.png'
 
 const Navigation = () => {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+    <Navbar collapseOnSelect expand="lg"  variant='dark'>
   <Container>
   <Navbar.Brand href="#home">
       <img src={logo} className="img-fluid" height='130px' width='150px' alt="" />

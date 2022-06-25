@@ -1,0 +1,16 @@
+.headerBanner{
+    background: url('../../../Assets/Image/Homepage.png') no-repeat fixed;
+    background-position: bottom center;
+    height: 100vh; 
+    background-size: cover; 
+    position: relative;
+}
+.overlay{  
+    background-color: rgba(0,0,0,.6);
+    height: 100%;
+}
+.services-area{
+    text-align: left;
+    margin-top: 120px;
+    color:#fff;
+}
